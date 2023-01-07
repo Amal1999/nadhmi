@@ -7,13 +7,17 @@ import { UserSignupComponent } from './user-signup/user-signup.component';
 import { DropdownWithIconComponent } from './form/dropdown-with-icon/dropdown-with-icon.component';
 import { TextInputWithIconComponent } from './form/text-input-with-icon/text-input-with-icon.component';
 import { NG_VALUE_ACCESSOR, ReactiveFormsModule } from '@angular/forms';
+import { PetOwnerComponent } from './user-signup/pet-owner/pet-owner.component';
+import { DoctorComponent } from './user-signup/doctor/doctor.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     UserSignupComponent,
     DropdownWithIconComponent,
-    TextInputWithIconComponent
+    TextInputWithIconComponent,
+    PetOwnerComponent,
+    DoctorComponent
   ],
   imports: [
     BrowserModule,
