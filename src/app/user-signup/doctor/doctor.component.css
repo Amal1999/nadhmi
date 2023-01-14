@@ -6,10 +6,10 @@
     position: relative;
     background: linear-gradient(to right, #172D4E, #738dc2, #193A6A);
   }
-  .border-gradient {
+  .border-gradient1 {
     padding: 0.09rem;
     position: relative;
-    background: linear-gradient(to right, #172D4E, #738dc2, #193A6A);
+    background: linear-gradient(to right, #f80404, #ee680f, #f00000);
   }
   
   select {

@@ -9,7 +9,8 @@ import { TextInputWithIconComponent } from './form/text-input-with-icon/text-inp
 import { NG_VALUE_ACCESSOR, ReactiveFormsModule } from '@angular/forms';
 import { PetOwnerComponent } from './user-signup/pet-owner/pet-owner.component';
 import { DoctorComponent } from './user-signup/doctor/doctor.component';
-
+import { ToastrModule } from 'ngx-toastr';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 @NgModule({
   declarations: [
     AppComponent,
@@ -22,8 +23,12 @@ import { DoctorComponent } from './user-signup/doctor/doctor.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    BrowserAnimationsModule,
     ReactiveFormsModule,
-    FontAwesomeModule
+    FontAwesomeModule,
+    ToastrModule.forRoot()
+   
+    
   ],
   providers: [
     {

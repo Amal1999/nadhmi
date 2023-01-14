@@ -107,7 +107,7 @@ doctorrrr
              Confirmer
           </label>
         
-          <div class="flex w-full relative border-gradient rounded">
+          <div class="flex w-full relative  rounded" [ngClass]="{'border-gradient1': !profileForm.controls['confirmPassword'].invalid, 'border-gradient': !profileForm.controls['confirmPassword'].invalid}">
             <span class="z-10 h-full leading-snug font-normal absolute text-center text-slate-300 absolute bg-transparent rounded text-base items-center justify-center w-8 pl-3 py-3">
               <fa-icon   class="fas fa-lock"></fa-icon>
             </span>
@@ -119,11 +119,17 @@ doctorrrr
          
       </div>
      
-
-   
-
-
- 
-        <button type="submit" [disabled]="!profileForm.valid ">Submit</button>
+    <div class="w-100 p-1">
+      <div class="mt-8 flex justify-center ">
+       <br> 
+        <button type="submit" [disabled]="!profileForm.valid"   class="mx-auto my-auto  text-white  rounded-full py-2 px-4 rounded opacity-50 "[ngClass]="{'bg-gray-400': !profileForm.valid, 'bg-green-500': profileForm.valid}">
+          s'inscrire
+        </button>
+      </div>
+       
+      
+     
+    </div>
+         
     </div>
    </form>

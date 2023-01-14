@@ -20,15 +20,15 @@
         </div>
       </div>
 
-        <div class="flex gap-10 justify-center max-sm:mb-10 max-md:mb-10 max-xl:mb-10 xl:mb-20 content-center	">
-          <div class=" w-1/6 aspect-square categorie-card bg-white grid place-items-center rounded hover:bg-[#f5ca92]">
-            <div class="rounded-full aspect-square bg-transparent w-3/5 h-4/5" (click)="switchUser()">
+        <div class="flex gap-10 justify-center max-sm:mb-10 max-md:mb-10 max-xl:mb-10 xl:mb-20 content-center	" >
+          <div class=" w-1/6 aspect-square categorie-card  grid place-items-center rounded hover:bg-[#f5ca92]" (click)="switchUser()" [ngClass]="{'bg-[#f5ca92]': simpleUser, 'bg-white': !simpleUser}">
+            <div class="rounded-full aspect-square bg-transparent w-3/5 h-4/5" >
               <img src="assets/images/auth/petowner_choose_card.png">
             </div>
             <p class="text-sm mb-1 max-sm:text-xs">Utilisateur</p>
           </div>
-          <div class="w-1/6 aspect-square categorie-card bg-white grid place-items-center rounded hover:bg-[#F5ca92]">
-            <div class="rounded-full aspect-square bg-transparent w-3/5 h-4/5" (click)="switchToDocter()">
+          <div class="w-1/6 aspect-square categorie-card  grid place-items-center rounded hover:bg-[#F5ca92]" (click)="switchToDocter()" [ngClass]="{'bg-[#f5ca92]': !simpleUser, 'bg-white': simpleUser}">
+            <div class="rounded-full aspect-square bg-transparent w-3/5 h-4/5" >
               <img src="assets/images/auth/vet_choose_card.png">
             </div>
             <p class="text-sm max-sm:text-xs">Vétérinaire</p>

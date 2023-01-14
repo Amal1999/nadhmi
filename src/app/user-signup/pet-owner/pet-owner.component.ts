@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-pet-owner',
@@ -34,7 +35,7 @@ export class PetOwnerComponent implements OnInit {
     "Tunis",
     "Zaghouan"]
   genders : string[] = ["female","male"]
-  constructor(private fb: FormBuilder) { }
+  constructor(private fb: FormBuilder,private toastr: ToastrService) { }
 
   ngOnInit(): void {
   }
@@ -62,7 +63,10 @@ export class PetOwnerComponent implements OnInit {
   
   onSubmit(){
  
-      console.log('Name:' + this.profileForm.get('lastName')?.value);
+    if(this.profileForm.valid)
+    {
+     this.toastr.success('This is a success notification', 'Success', {timeOut: 3000});
+    }
        
      
     
